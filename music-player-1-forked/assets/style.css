@@ -1,0 +1,570 @@
+/* 
+================
+Global Variables
+================
+*/
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+
+  --blue-100: #93A8B3;
+  --blue-200: #141B41;
+  --blue-300: #12193E;
+  --blue-400: #202439;
+  --blue-500: #1A1E33;
+  --blue-600: #0C1027;
+
+  --btn-gradient: linear-gradient(45deg, #3123AE, #C348DF);
+  --progress-gradient: linear-gradient(#1ED760, #40ED99);
+
+  --primary-bg-color: var(--blue-600);
+  --secondary-bg-color: var(--blue-500);
+
+  --primary-bg-highlight: var(--blue-200);
+  --secondary-bg-highlight: var(--blue-400);
+
+  --primary-color: var(--white);
+  --secondary-color: var(--blue-100);
+
+  --player-bg-color: #282828;
+  --player-inactive-controls-color: #B3B3B3;
+
+  --header-height: 60px;
+  --footer-height: 60px;
+}
+
+/* 
+=============
+Global Styles
+=============
+*/
+
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  height: var(--header-height);
+}
+
+main {
+  color: var(--secondary-color);
+  height: calc(100vh - var(--header-height));
+  padding-bottom: var(--footer-height);
+}
+
+footer {
+  background-color: var(--player-bg-color);
+  height: var(--footer-height);
+  z-index: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* 
+==============
+Global Classes
+==============
+*/
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* 
+=============
+Custom Styles
+=============
+*/
+
+/* Header Section Start */
+header nav .logo {
+  height: 3rem;
+}
+
+header nav .search-box {
+  background-color: var(--primary-bg-highlight);
+  max-width: 220px;
+}
+
+header nav .search-box img {
+  height: 1.25rem;
+}
+
+header nav .search-box input {
+  outline: none;
+}
+
+header nav .favorites-btn, .microphone-icon, .notification {
+  cursor: pointer;
+}
+
+header nav .notification::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: red;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+header nav .notification-icon {
+  height: 1.5rem;
+}
+
+header nav .profile {
+  height: 2.75rem;
+  width: 2.75rem;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Header Section End */
+
+
+
+/* Main Section Start */
+
+main .right-col__container {
+  background-image: linear-gradient(180deg, transparent, var(--primary-bg-color) 20px);
+}
+
+.carousel {
+  background-image: linear-gradient(to bottom, transparent, var(--primary-bg-highlight), transparent);
+}
+
+.carousel-item img {
+  cursor: pointer;
+}
+
+.banner__container>div {
+  aspect-ratio: 1;
+  background-size: cover;
+  width: 180px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.banner__container:hover>div:not(:hover) {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.banner__container .latino-dance-club {
+  background-image: url('../assets/images/carousel/latino-dance-club.jpg');
+}
+
+.banner__container .mood-boosters {
+  background-image: url('../assets/images/carousel/mood-boosters.jpg');
+}
+
+.banner__container .edm {
+  background-image: url('../assets/images/carousel/edm.jpg');
+}
+
+/* Latest Release Container */
+
+.latest-release__container .list-body .list-item-container .song-thumbnail {
+  background-image: url('../assets/images/latest-release/onism.jpg');
+  background-position: center;
+  background-size: contain;
+  height: 5rem;
+  flex-basis: 5rem;
+  cursor: pointer;
+}
+
+.latest-release__container .list-body .list-item-container .song-thumbnail img,
+.popular-artists__container .list-body .artist-image__container .image-container img {
+  display: none;
+  height: 3rem;
+}
+
+.latest-release__container .list-body .list-item-container .song-thumbnail:hover img,
+.popular-artists__container .list-body .artist-image__container .image-container:hover img {
+  display: block;
+}
+
+.latest-release__container .list-body .list-item-container input[type="radio"]:focus~.option__container {
+  display: block;
+}
+
+.latest-release__container .list-body .list-item-container .option__container {
+  display: none;
+  right: 30px;
+  width: 150px;
+  z-index: 1;
+}
+
+/* Queue Container */
+
+.queue__container .position-sticky {
+  top: -1px;
+  z-index: 1;
+}
+.queue__container .position-sticky h4 {
+  background-image: linear-gradient(0deg, transparent, var(--primary-bg-color) 25%);
+}
+
+.queue__container .list-body .list-item-container {
+  cursor: pointer;
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail {
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: inherit;
+  background-size: contain;
+  filter: blur(4px);
+  height: 101%;
+  width: 101%;
+  z-index: -1;
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.seven-rings {
+  background-image: url('../assets/images/queue/7rings.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.attention {
+  background-image: url('../assets/images/queue/attention.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.cheapthrills {
+  background-image: url('../assets/images/queue/cheapthrills.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.good4u {
+  background-image: url('../assets/images/queue/good4u.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.kissmemore {
+  background-image: url('../assets/images/queue/kissmemore.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.peaches {
+  background-image: url('../assets/images/queue/peaches.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.roar {
+  background-image: url('../assets/images/queue/roar.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.shapeofyou {
+  background-image: url('../assets/images/queue/shapeofyou.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.starboy {
+  background-image: url('../assets/images/queue/starboy.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.cheapthrills {
+  background-image: url('../assets/images/queue/cheapthrills.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-thumbnail.shapeofyou {
+  background-image: url('../assets/images/queue/shapeofyou.jpg');
+}
+
+.queue__container .list-body .list-item-container .song-info {
+  align-self: flex-start;
+}
+
+.queue__container .list-body .list-item-container .like {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* Popular Artist Container */
+
+.popular-artists__container .artist-image__container {
+  cursor: pointer;
+}
+
+.popular-artists__container .artist-image__container .image-container {
+  background-size: cover;
+  background-position: center;
+  height: 80px;
+  width: 80px;
+}
+
+.popular-artists__container .artist-image__container .image-container.bruno-mars {
+  background-image: url('../assets/images/artists/bruno-mars.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.bruno-mars:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/artists/bruno-mars.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.charlie-puth {
+  background-image: url('../assets/images/artists/charlie-puth.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.charlie-puth:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/artists/charlie-puth.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.cold-play {
+  background-image: url('../assets/images/artists/cold-play.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.cold-play:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/artists/cold-play.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.ed-sheeran {
+  background-image: url('../assets/images/artists/ed-sheeran.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.ed-sheeran:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/artists/ed-sheeran.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.imagine-dragon {
+  background-image: url('../assets/images/artists/imagine-dragon.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.imagine-dragon:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/artists/imagine-dragon.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.zayn {
+  background-image: url('../assets/images/artists/zayn.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.zayn:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/artists/zayn.jpg');
+}
+
+.popular-artists__container .artist-image__container .image-container.imagine-dragon.more-artists {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/artists/imagine-dragon.jpg');
+}
+
+.popular-artists__container .artist-image__container span {
+  display: block;
+  margin-top: .5rem;
+  text-align: center;
+}
+
+/* Categories Container */
+
+.categories__container {
+  background-color: var(--primary-bg-highlight);
+}
+
+.categories__container>ul::-webkit-scrollbar {
+  /* background-color: var(--player-bg-color); */
+  display: block;
+  height: 1rem;
+}
+
+.categories__container>ul::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  size: 0.75rem;
+  margin: 4px;
+}
+
+.category-image__container .image-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  line-height: 50px;
+}
+
+.category-image__container .image-container:not(.stations) {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+
+.category-image__container .image-container.stations {
+  background-image: url('../assets/images/categories/stations-img.png');
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+}
+
+.category-image__container .image-container.love {
+  background-image: linear-gradient(rgba(169, 36, 31, 0.3), rgba(169, 36, 31, 0.3)), url('../assets/images/categories/love.jpg');
+}
+
+.category-image__container .image-container.retro {
+  background-image: linear-gradient(rgba(192, 156, 103, 0.3), rgba(192, 156, 103, 0.3)), url('../assets/images/categories/retro.png');
+}
+
+.category-image__container .image-container.chill {
+  background-image: linear-gradient(rgba(159, 159, 160, 0.3), rgba(159, 159, 160, 0.3)), url('../assets/images/categories/chill.jpg');
+}
+
+.category-image__container .image-container.workout {
+  background-image: linear-gradient(rgba(1, 177, 234, 0.3), rgba(1, 177, 234, 0.3)), url('../assets/images/categories/workout.jpg');
+}
+
+.category-image__container .image-container.rock {
+  background-image: linear-gradient(rgba(83, 95, 124, 0.3), rgba(83, 95, 124, 0.3)), url('../assets/images/categories/rock.jpg');
+}
+
+.category-image__container .image-container.pop {
+  background-image: linear-gradient(rgba(252, 102, 154, 0.3), rgba(252, 102, 154, 0.3)), url('../assets/images/categories/pop.jpg');
+}
+
+/* Genre Container */
+
+.genre__container div {
+  min-width: 170px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.genre__container div img {
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.genre__container div:hover img {
+  transform: scale(1.15);
+}
+
+/* Latest Collection Container */
+.latest-collection__container .list-body ul li {
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 75px;
+}
+
+/* Artist Playlist Page */
+
+.artist-banner__container {
+  background-color: var(--primary-bg-highlight);
+}
+
+.artist-banner__container .image-container {
+  aspect-ratio: 1;
+  background-image: linear-gradient(180deg, transparent 20%, var(--primary-bg-highlight)),
+    url('../assets/images/artists/cold-play.jpg');
+  background-position: left center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.artist-banner__container .gradient-button {
+  background-image: var(--btn-gradient);
+}
+
+.left-col__container .artist-playlist.queue__container .list-body .list-item-container {
+  background-color: var(--blue-500);
+}
+
+.left-col__container .artist-playlist.queue__container .list-body .list-item-container:hover {
+  background-color: var(--secondary-bg-highlight);
+}
+
+.right-col__container .queue__container .similar-artist .list-body .list-item-container .song-thumbnail {
+  background-image: url('./images/latest-collection/latest-collection-04.png');
+}
+/* Main Section End */
+
+
+
+/* Footer Section Start */
+.music-player__container .progress-bar__container {
+  color: var(--player-inactive-controls-color);
+}
+
+.music-player__container .device-controls__container img {
+  max-width: 20px;
+}
+
+/* Footer Section End */
+
+/* 
+=============
+Media Queries
+=============
+*/
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+  main>.container {
+    height: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  :root {
+    --header-height: 70px;
+    --footer-height: 70px;
+  }
+
+  header nav .logo {
+    height: 4rem;
+  }
+
+
+  header nav .search-box {
+    max-width: 250px;
+  }
+
+  header nav .search-box img {
+    height: 1.5rem;
+  }
+
+  header nav .notification-icon {
+    height: 2rem;
+  }
+
+  header nav .profile {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {}

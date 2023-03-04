@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <title>Ninja Studio</title>
+  </head>
+
+  <body>
+    <!-- Header Start -->
+    <header class="d-flex align-items-center sticky-top top-0 | pt-2 pt-sm-3 px-sm-3 px-md-5">
+      <!-- Navbar -->
+      <nav class="flex-grow-1 d-flex align-items-center gap-3 gap-sm-4 gap-md-5">
+        <a href="#">
+          <img src="./assets/ninja-studio_logo.png" alt="Ninja Studio Logo" class="logo">
+        </a>
+
+        <span class="favorites-btn | d-none d-sm-block | ms-3 ms-md-5 text-white">Favorites</span>
+
+        <div
+          class="search-box | flex-grow-1 d-flex align-items-center justify-content-between gap-1 | mx-auto ms-sm-auto me-sm-0 p-1 px-sm-2 rounded">
+          <img src="./assets/icons/navbar/bx-search.svg" alt="Search Lens" class="search-icon">
+
+          <input type="text" class="flex-grow-1 | bg-transparent border-0 text-white w-100" name="search"
+            placeholder="Search">
+
+          <img src="./assets/icons/navbar/bxs-microphone.svg" alt="Microphone" class="microphone-icon">
+        </div>
+
+        <span class="notification | position-relative">
+          <img src="./assets/icons/navbar/bxs-bell.svg" alt="Bell" class="notification-icon">
+        </span>
+
+        <img src="./assets/images/profile.jpg" alt="profile" class="profile | flex-shrink-0 | me-2 rounded-circle">
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Start-->
+    <main class="overflow-auto">
+      <!-- Bootstrap Carousel -->
+      <!-- Carousel for Mobile screens -->
+      <div id="carouselExampleControls" class="carousel slide | d-sm-none | p-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/carousel/latino-dance-club.jpg" class="d-block mx-auto" alt="Latino Dance Club">
+          </div>
+
+          <div class="carousel-item">
+            <img src="./assets/images/carousel/mood-boosters.jpg" class="d-block mx-auto" alt="Mood Boosters">
+          </div>
+
+          <div class="carousel-item">
+            <img src="./assets/images/carousel/edm.jpg" class="d-block mx-auto" alt="EDM">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="container d-flex | overflow-auto">
+        <div class="left-col__container | col col-md-8 | h-100 overflow-auto pe-md-3">
+          <!-- Banner -->
+          <section class="banner__container | d-none d-sm-flex | mt-4 mb-5 mx-0">
+            <div class="latino-dance-club | col"></div>
+
+            <div class="mood-boosters | col | mx-3"></div>
+
+            <div class="edm | col"></div>
+          </section>
+
+          <!-- Latest Release -->
+          <section class="latest-release__container | mb-5 mb-sm-4">
+            <ul class="ps-0">
+              <li class="list-header | mb-4 text-white">
+                <h4>Latest Release</h4>
+              </li>
+
+              <li class="list-body">
+                <ul class="row row-cols-1 row-cols-sm-2 gy-4 | ps-0 w-100">
+                  <li class="list-item-container | d-flex align-items-center gap-3">
+                    <div class="song-thumbnail | position-relative">
+                      <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                        class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                    </div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Onism</h5>
+
+                      <span>Feb 1, 2023</span>
+                    </div>
+
+                    <div class="align-self-start position-relative">
+                      <label for="option1">
+                        <img src="./assets/icons/bx-dots-horizontal-rounded.svg" alt="three-dots"
+                          class="cursor-pointer">
+                      </label>
+
+                      <input type="radio" name="option" id="option1" class="visually-hidden">
+
+                      <div class="option__container | position-absolute top-0 | bg-light p-2">
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/Player/bx-play-dark.svg" alt="">
+
+                          <span>Play Now</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-plus.svg" alt="">
+
+                          <span>Add to Queue</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-list-plus.svg" alt="">
+
+                          <span>Add To Favorites</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-info-circle.svg" alt="">
+
+                          <span>Get Info</span>
+                        </a>
+                      </div>
+
+                      <span class="d-block">4:44</span>
+                    </div>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3">
+                    <div class="song-thumbnail | position-relative">
+                      <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                        class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                    </div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Onism</h5>
+
+                      <span class="release-date">Feb 1, 2023</span>
+                    </div>
+
+                    <div class="align-self-start position-relative">
+                      <label for="option2">
+                        <img src="./assets/icons/bx-dots-horizontal-rounded.svg" alt="three-dots"
+                          class="cursor-pointer">
+                      </label>
+
+                      <input type="radio" name="option" id="option2" class="visually-hidden">
+
+                      <div class="option__container | position-absolute top-0 | bg-light p-2">
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/Player/bx-play-dark.svg" alt="">
+
+                          <span>Play Now</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-plus.svg" alt="">
+
+                          <span>Add to Queue</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-list-plus.svg" alt="">
+
+                          <span>Add To Favorites</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-info-circle.svg" alt="">
+
+                          <span>Get Info</span>
+                        </a>
+                      </div>
+
+                      <span class="d-block">4:44</span>
+                    </div>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3">
+                    <div class="song-thumbnail | position-relative">
+                      <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                        class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                    </div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Onism</h5>
+
+                      <span>Feb 1, 2023</span>
+                    </div>
+
+                    <div class="align-self-start position-relative">
+                      <label for="option3">
+                        <img src="./assets/icons/bx-dots-horizontal-rounded.svg" alt="three-dots"
+                          class="cursor-pointer">
+                      </label>
+
+                      <input type="radio" name="option" id="option3" class="visually-hidden">
+
+                      <div class="option__container | position-absolute top-0 | bg-light p-2">
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/Player/bx-play-dark.svg" alt="">
+
+                          <span>Play Now</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-plus.svg" alt="">
+
+                          <span>Add to Queue</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-list-plus.svg" alt="">
+
+                          <span>Add To Favorites</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-info-circle.svg" alt="">
+
+                          <span>Get Info</span>
+                        </a>
+                      </div>
+
+                      <span class="d-block">4:44</span>
+                    </div>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3">
+                    <div class="song-thumbnail | position-relative">
+                      <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                        class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                    </div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Onism</h5>
+
+                      <span>Feb 1, 2023</span>
+                    </div>
+
+                    <div class="align-self-start position-relative">
+                      <label for="option4">
+                        <img src="./assets/icons/bx-dots-horizontal-rounded.svg" alt="three-dots"
+                          class="cursor-pointer">
+                      </label>
+
+                      <input type="radio" name="option" id="option4" class="visually-hidden">
+
+                      <div class="option__container | position-absolute top-0 | bg-light p-2">
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/Player/bx-play-dark.svg" alt="">
+
+                          <span>Play Now</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-plus.svg" alt="">
+
+                          <span>Add to Queue</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-list-plus.svg" alt="">
+
+                          <span>Add To Favorites</span>
+                        </a>
+
+                        <hr>
+
+                        <a href="#" class="d-block">
+                          <img src="./assets/icons/bx-info-circle.svg" alt="">
+
+                          <span>Get Info</span>
+                        </a>
+                      </div>
+
+                      <span class="d-block">4:44</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Queue -->
+          <aside class="queue__container | d-md-none | mb-5 mb-md-3">
+            <ul class="ps-0">
+              <li>
+                <h4 class="text-white">Queue</h4>
+              </li>
+
+              <li class="list-body | mt-4">
+                <ul class="px-3 px-sm-4">
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      01
+                    </span>
+
+                    <div class="song-thumbnail seven-rings"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">7 Rings</h5>
+
+                      <span class="artist">Ariana Grande</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      02
+                    </span>
+
+                    <div class="song-thumbnail attention"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Attention</h5>
+
+                      <span class="artist">Charlie Puth</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      03
+                    </span>
+
+                    <div class="song-thumbnail cheapthrills"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Cheap Thrills</h5>
+
+                      <span class="artist">Sia</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      04
+                    </span>
+
+                    <div class="song-thumbnail good4u"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Good 4 U</h5>
+
+                      <span class="artist">Olivia Rodrigo</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      05
+                    </span>
+
+                    <div class="song-thumbnail kissmemore"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Kiss Me More</h5>
+
+                      <span class="artist">Doja Cat</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      06
+                    </span>
+
+                    <div class="song-thumbnail peaches"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Peaches</h5>
+
+                      <span class="artist">Justin Bieber</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      07
+                    </span>
+
+                    <div class="song-thumbnail roar"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Roar</h5>
+
+                      <span class="artist">Katy Perry</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      08
+                    </span>
+
+                    <div class="song-thumbnail shapeofyou"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Shape Of You</h5>
+
+                      <span class="artist">Ed Sheeran</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      09
+                    </span>
+
+                    <div class="song-thumbnail starboy"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Starboy</h5>
+
+                      <sppan class="artist">The Weeknd</sppan>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      10
+                    </span>
+
+                    <div class="song-thumbnail cheapthrills"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Cheap Thrills</h5>
+
+                      <span class="artist">Sia</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">
+                      11
+                    </span>
+
+                    <div class="song-thumbnail shapeofyou"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Shape Of You</h5>
+
+                      <span class="artist">Ed Sheeran</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Popular Artists -->
+          <section class="popular-artists__container | mb-5  mb-sm-4">
+            <ul class="ps-0">
+              <li>
+                <h4 class="mb-4 text-white">Popular Artists</h4>
+              </li>
+
+              <li class="list-body">
+                <ul class="d-flex justify-content-between gap-3 gap-md-2 gap-lg-3| ps-0 overflow-auto">
+                  <li class="artist-image__container | d-md-none d-lg-block | flex-grow-1 flex-shrink-0">
+                    <a href="./artist-playlist.html">
+                      <div class="image-container bruno-mars | position-relative | mx-auto rounded-circle">
+                        <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                          class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                      </div>
+
+                      <span class="text-white">Bruno Mars</span>
+                    </a>
+                  </li>
+
+                  <li class="artist-image__container | flex-grow-1 flex-shrink-0">
+                    <a href="./artist-playlist.html">
+                      <div class="image-container charlie-puth | position-relative | mx-auto rounded-circle">
+                        <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                          class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                      </div>
+
+                      <span class="text-white">Charlie Puth</span>
+                    </a>
+                  </li>
+
+                  <li class="artist-image__container | flex-grow-1 flex-shrink-0">
+                    <a href="./artist-playlist.html">
+                      <div class="image-container ed-sheeran | position-relative | mx-auto rounded-circle">
+                        <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                          class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                      </div>
+
+                      <span class="text-white">Ed Sheeran</span>
+                    </a>
+                  </li>
+
+                  <li class="artist-image__container | flex-grow-1 flex-shrink-0">
+                    <a href="./artist-playlist.html">
+                      <div class="image-container zayn | position-relative | mx-auto rounded-circle">
+                        <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                          class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                      </div>
+
+                      <span class="text-white">Zayn</span>
+                    </a>
+                  </li>
+
+                  <li class="artist-image__container | flex-grow-1 flex-shrink-0">
+                    <a href="./artist-playlist.html">
+                      <div class="image-container cold-play | position-relative | mx-auto rounded-circle">
+                        <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                          class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                      </div>
+
+                      <span class="text-white">Cold Play</span>
+                    </a>
+                  </li>
+
+                  <li class="artist-image__container | flex-grow-1 flex-shrink-0">
+                    <a href="./artist-playlist.html">
+                      <div class="image-container imagine-dragon | position-relative | mx-auto rounded-circle">
+                        <img src="./assets/icons/Player/bx-play.svg" alt="play"
+                          class="position-absolute top-50 start-50 translate-middle | cursor-pointer">
+                      </div>
+
+                      <span class="text-white">Imagine Dragon</span>
+                    </a>
+                  </li>
+
+                  <li class="artist-image__container | d-md-none d-lg-block | flex-grow-1 flex-shrink-0">
+                    <a href="./artist-playlist.html">
+                      <div
+                        class="image-container imagine-dragon more-artists | position-relative | mx-auto rounded-circle">
+                        <span class="position-absolute top-50 start-50  translate-middle | text-center text-white">See
+                          more</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Categories -->
+          <section class="categories__container | mb-5 mb-sm-4">
+            <ul class="d-flex align-items-center justify-content-between | mb-0 overflow-auto px-3 ">
+              <li class="category-image__container">
+                <div class="image-container stations | mx-auto rounded-circle"></div>
+              </li>
+
+              <li class="category-image__container | flex-grow-1 flex-shrink-0 | px-3">
+                <div class="image-container love | mx-auto rounded-circle text-center">
+                  <span class="fw-bold text-white">Love</span>
+                </div>
+              </li>
+
+              <li class="category-image__container | flex-grow-1 flex-shrink-0| px-3">
+                <div class="image-container retro | mx-auto rounded-circle text-center">
+                  <span class="fw-bold text-white">Retro</span>
+                </div>
+              </li>
+
+              <li class="category-image__container | flex-grow-1 flex-shrink-0 | px-3">
+                <div class="image-container chill | mx-auto rounded-circle text-center">
+                  <span class="fw-bold text-white">Chill</span>
+                </div>
+              </li>
+
+              <li class="category-image__container | flex-grow-1 flex-shrink-0 | px-3">
+                <div class="image-container workout | mx-auto rounded-circle text-center">
+                  <span class="fw-bold text-white">Workout</span>
+                </div>
+              </li>
+
+              <li class="category-image__container | flex-grow-1 flex-shrink-0 | px-3">
+                <div class="image-container rock | mx-auto rounded-circle text-center">
+                  <span class="fw-bold text-white">Rock</span>
+                </div>
+              </li>
+
+              <li class="category-image__container | flex-grow-1 flex-shrink-0 | px-3">
+                <div class="image-container pop | mx-auto rounded-circle text-center">
+                  <span class="fw-bold text-white">Pop</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Genre -->
+          <section class="genre__container | row flex-wrap gap-3 | mb-5 mb-sm-4 mx-0">
+            <div class="genre-party__container col p-0 position-relative">
+              <img src="./assets/images/genre/party.jpg" alt="Party" class="w-100">
+
+              <span
+                class="position-absolute top-50 start-50 translate-middle | fs-5 text-center text-white w-100">Party</span>
+            </div>
+
+            <div class="genre-electronic__container col p-0 position-relative">
+              <img src="./assets/images/genre/electronic.jpg" alt="Electronic" class="w-100">
+
+              <span
+                class="position-absolute top-50 start-50 translate-middle | fs-5 text-center text-white w-100">Electronic</span>
+            </div>
+
+            <div class="genre-road-trip__container col p-0 position-relative">
+              <img src="./assets/images/genre/road-trip.jpg" alt="Road Trip" class="w-100">
+
+              <span class="position-absolute top-50 start-50 translate-middle | fs-5 text-center text-white w-100">Road
+                Trip</span>
+            </div>
+          </section>
+
+          <!-- Latest English -->
+          <section class="latest-collection__container english | mb-4">
+            <ul class="ps-0">
+              <li class="mb-4 text-white">
+                <h4>Latest English</h4>
+              </li>
+
+              <li class="list-body">
+                <ul class="d-flex justify-content-between gap-3 | overflow-auto ps-0">
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-01.jpg" alt="Collection 1"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span>Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-02.jpg" alt="Collection 2"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span>Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-03.jpg" alt="Collection 3"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span>Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-04.png" alt="Collection 4"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span>Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-01.jpg" alt="Collection 5"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span>Feb 1, 2023</span>
+                  </li>
+
+                  <li class="d-md-none d-lg-block">
+                    <img src="./assets/images/latest-collection/latest-collection-03.jpg" alt="Collection 6"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span>Feb 1, 2023</span>
+                  </li>
+
+                  <li class="d-md-none d-lg-block">
+                    <img src="./assets/images/latest-collection/latest-collection-02.jpg" alt="Collection 7"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span>Feb 1, 2023</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Latest Tamil -->
+          <section class="latest-collection__container tamil">
+            <ul class="ps-0">
+              <li class="mb-4 text-white">
+                <h4>Latest Tamil</h4>
+              </li>
+
+              <li class="list-body">
+                <ul class="d-flex justify-content-between gap-3 | overflow-auto ps-0">
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-02.jpg" alt="Collection 1"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span class="release-date">Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-04.png" alt="Collection 2"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span class="release-date">Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-01.jpg" alt="Collection 3"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span class="release-date">Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-03.jpg" alt="Collection 4"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span class="release-date">Feb 1, 2023</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/latest-collection/latest-collection-02.jpg" alt="Collection 5"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span class="release-date">Feb 1, 2023</span>
+                  </li>
+
+                  <li class="d-md-none d-lg-block">
+                    <img src="./assets/images/latest-collection/latest-collection-01.jpg" alt="Collection 6"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span class="release-date">Feb 1, 2023</span>
+                  </li>
+
+                  <li class="d-md-none d-lg-block">
+                    <img src="./assets/images/latest-collection/latest-collection-04.png" alt="Collection 7"
+                      class="w-100">
+
+                    <h5 class="mb-0 mt-2 text-white">Onism</h5>
+
+                    <span class="release-date">Feb 1, 2023</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="right-col__container | col-4 | d-none d-md-block | h-100 overflow-auto">
+          <!-- Large Screen Queue -->
+          <aside class="queue__container | mb-5 mb-md-3">
+            <ul class="ps-0">
+              <li class="position-sticky">
+                <h4 class="text-white">Queue</h4>
+              </li>
+
+              <li class="list-body | mt-4">
+                <ul class="pe-md-0 pe-lg-3 px-3 px-sm-4">
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">01</span>
+
+                    <div class="song-thumbnail seven-rings"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">7 Rings</h5>
+
+                      <span>Ariana Grande</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">02</span>
+
+                    <div class="song-thumbnail attention"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Attention</h5>
+
+                      <span class="artist">Charlie Puth</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">03</span>
+
+                    <div class="song-thumbnail cheapthrills"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Cheap Thrills</h5>
+
+                      <span class="artist">Sia</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">04</span>
+
+                    <div class="song-thumbnail good4u"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Good 4 U</h5>
+
+                      <span class="artist">Olivia Rodrigo</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">05</span>
+
+                    <div class="song-thumbnail kissmemore"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Kiss Me More</h5>
+
+                      <span class="artist">Doja Cat</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">06</span>
+
+                    <div class="song-thumbnail peaches"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Peaches</h5>
+
+                      <span class="artist">Justin Bieber</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">07</span>
+
+                    <div class="song-thumbnail roar"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Roar</h5>
+
+                      <span class="artist">Katy Perry</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">08</span>
+
+                    <div class="song-thumbnail shapeofyou"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Shape Of You</h5>
+
+                      <span class="artist">Ed Sheeran</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">09</span>
+
+                    <div class="song-thumbnail starboy"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Starboy</h5>
+
+                      <span class="artist">The Weeknd</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">10</span>
+
+                    <div class="song-thumbnail kissmemore"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Kiss Me More</h5>
+
+                      <span class="artist">Doja Cat</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">11</span>
+
+                    <div class="song-thumbnail seven-rings"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">7 Rings</h5>
+
+                      <span>Ariana Grande</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">12</span>
+
+                    <div class="song-thumbnail attention"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Attention</h5>
+
+                      <span class="artist">Charlie Puth</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">13</span>
+
+                    <div class="song-thumbnail cheapthrills"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Cheap Thrills</h5>
+
+                      <span class="artist">Sia</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">14</span>
+
+                    <div class="song-thumbnail good4u"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Good 4 U</h5>
+
+                      <span class="artist">Olivia Rodrigo</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">15</span>
+
+                    <div class="song-thumbnail kissmemore"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Kiss Me More</h5>
+
+                      <span class="artist">Doja Cat</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">16</span>
+
+                    <div class="song-thumbnail peaches"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Peaches</h5>
+
+                      <span class="artist">Justin Bieber</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">17</span>
+
+                    <div class="song-thumbnail roar"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Roar</h5>
+
+                      <span class="artist">Katy Perry</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">18</span>
+
+                    <div class="song-thumbnail shapeofyou"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Shape Of You</h5>
+
+                      <span class="artist">Ed Sheeran</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">19</span>
+
+                    <div class="song-thumbnail starboy"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Starboy</h5>
+
+                      <span class="artist">The Weeknd</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">20</span>
+
+                    <div class="song-thumbnail kissmemore"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Kiss Me More</h5>
+
+                      <span class="artist">Doja Cat</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">21</span>
+
+                    <div class="song-thumbnail seven-rings"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">7 Rings</h5>
+
+                      <span>Ariana Grande</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">22</span>
+
+                    <div class="song-thumbnail attention"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Attention</h5>
+
+                      <span class="artist">Charlie Puth</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">23</span>
+
+                    <div class="song-thumbnail cheapthrills"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Cheap Thrills</h5>
+
+                      <span class="artist">Sia</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">24</span>
+
+                    <div class="song-thumbnail good4u"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Good 4 U</h5>
+
+                      <span class="artist">Olivia Rodrigo</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">25</span>
+
+                    <div class="song-thumbnail kissmemore"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Kiss Me More</h5>
+
+                      <span class="artist">Doja Cat</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">26</span>
+
+                    <div class="song-thumbnail peaches"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Peaches</h5>
+
+                      <span class="artist">Justin Bieber</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">27</span>
+
+                    <div class="song-thumbnail roar"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Roar</h5>
+
+                      <span class="artist">Katy Perry</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">28</span>
+
+                    <div class="song-thumbnail shapeofyou"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Shape Of You</h5>
+
+                      <span class="artist">Ed Sheeran</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">29</span>
+
+                    <div class="song-thumbnail starboy"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Starboy</h5>
+
+                      <span class="artist">The Weeknd</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+
+                  <li class="list-item-container | d-flex align-items-center gap-3 | mb-4">
+                    <span class="song-order">30</span>
+
+                    <div class="song-thumbnail kissmemore"></div>
+
+                    <div class="flex-grow-1">
+                      <h5 class="mb-0 text-white">Kiss Me More</h5>
+
+                      <span class="artist">Doja Cat</span>
+                    </div>
+
+                    <span class="like">
+                      <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="w-75">
+                    </span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer class="position-fixed start-0 end-0 bottom-0">
+      <!-- Music Player -->
+      <section class="music-player__container | container d-flex | mx-auto h-100">
+        <div class="col-2 col-sm-3 | d-flex align-items-center gap-1 gap-md-2">
+          <div class="song-image__container | h-75">
+            <img src="./assets/images/latest-release/onism.jpg" alt="Onism" class="h-100">
+          </div>
+
+          <div class="text__container | flex-grow-1 | d-none d-sm-block | overflow-hidden">
+            <h5 class="mb-0 text-white text-truncate">Onism By Johnnen</h5>
+
+            <span class="text-secondary">Johnnen</span>
+          </div>
+
+          <div class="song-interest__container | d-none d-md-flex | h-75">
+            <span>
+              <img src="./assets/icons/Player/bx-heart.svg" alt="like" class="cursor-pointer pe-md-1 w-75">
+            </span>
+
+            <span>
+              <img src="./assets/icons/Player/bx-block.svg" alt="reject" class="cursor-pointer ps-md-1 w-75">
+            </span>
+          </div>
+        </div>
+
+        <div class="col-8 col-sm-6 | px-lg-5 pt-2">
+          <div class="player-controls__container | d-flex align-items-center justify-content-center gap-3 | h-50">
+            <span><img src="./assets/icons/Player/bx-shuffle.svg" alt="Shuffle" class="cursor-pointer w-75"></span>
+
+            <span><img src="./assets/icons/Player/bx-skip-previous.svg" alt="Previous" class="cursor-pointer"></span>
+
+            <span class="border border-1 border-white cursor-pointer rounded-circle"><img
+                src="./assets/icons/Player/bx-pause.svg" alt="Play"></span>
+            <span><img src="./assets/icons/Player/bx-skip-next.svg" alt="Next" class="cursor-pointer"></span>
+
+            <span><img src="./assets/icons/Player/bx-repeat.svg" alt="Repeat" class="cursor-pointer w-75"></span>
+          </div>
+
+          <div class="progress-bar__container | d-flex align-items-center justify-content-center gap-3 | h-50">
+            <span>0:01</span>
+
+            <label for="song-timeline" class="visually-hidden">Timeline</label>
+
+            <input type="range" name="songTimeline" id="song-timeline" class="cursor-pointer flex-grow-1">
+
+            <span>4:44</span>
+          </div>
+        </div>
+
+        <div
+          class="device-controls__container | col-2 col-sm-3 | d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-between justify-content-sm-center gap-1 | h-100 text-center">
+          <span class="col-5 col-sm-2"><img src="./assets/icons/Player/bxs-playlist.svg" alt="Playlist"
+              class="cursor-pointer w-100"></span>
+
+          <label for="volume" class="col-5 col-sm-2"><img src="./assets/icons/Player/bxs-volume-full.svg" alt="Volume"
+              class="cursor-pointer w-100"></label>
+
+          <span class="col | d-none d-sm-block"><input type="range" name="volume" id="volume"
+              class="cursor-pointer w-100"></span>
+
+          <span class="offset-7 col-5 offset-sm-0 col-sm-2 "><img src="./assets/icons/Player/bx-fullscreen.svg"
+              alt="Fullscreen" class="cursor-pointer w-100"></span>
+        </div>
+      </section>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+      
+    <script src="script.js"></script>
+  </body>
+</html>
